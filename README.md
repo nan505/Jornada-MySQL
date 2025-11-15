@@ -28,7 +28,7 @@ mysql -h localhost -u root -p
 <h3>Sintaxe:</h3>
 <ul>
   <li>Todos os comandos precisam ser finalizados com ponto e vírgula (;);</li><br>
-  <li>Ao inserir uma linha de comando incompleta, o CMD ira apresentar uma setinha (->):<br>
+  <li>Ao inserir uma linha de comando incompleta, o CMD exibirá uma setinha (->):<br>
       Ela serve para inserir o restante do código, sem a necessidade de reescrevê-lo;</li><br>
   <li>Ao finalizar uma linha de código com erro(s), uma mensagem de erro será exibida no CMD:<br>
       Caso um ou vários erros sejam exibidos, será necessário reescrever todo o código novamente, de forma correta;</li><br>
@@ -74,11 +74,11 @@ USE db_github;
   Ao inserir valores do tipo númerico, não os colocar dentro de aspas "".
   <li><b>DATE</b></li>
   Um tipo de dado para valores de datas no formato internacional (YYYY-MM-DD);<br>
-  Ao inserir valores do tipo DATE, sempre os coloque dentro de aspas "", ou irão aparecer como 0000-00-00.
+  Ao inserir valores do tipo DATE, sempre os coloque dentro de aspas "", ou serão exibidos como 0000-00-00.
 </ul>
 
 <h2 align="center">Visualizando, criando e descrevendo uma tabela</h2>
-<p align="center">PS: Estarei simplificando a descrição de cada comando para não usar a palavra "comando" toda hora!</p>
+<p align="center">PS: Estarei simplificando a descrição de cada comando para não precisar repetir a palavra "comando" toda hora!</p>
 <p align="center">PPS: Estarei utilizando o nome "tb_pessoas" como exemplo, mas pode ser qualquer nome!</p>
 <h4>Visualizar as tabelas já criadas no banco de dados:</h4>
 
