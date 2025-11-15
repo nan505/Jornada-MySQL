@@ -4,9 +4,31 @@
 
 Prazer, podem me chamar de Nan! Atualmente estou fazendo um curso de T.I. e decidi "documentar" meus aprendizados sobre MySQL por meio desse repositório!
 Esse projeto foi fortemente inspirado pelo repositório [Jornada JavaScript](https://github.com/JoaoGomeszs/Jornada-JavaScript), do meu extremamente talentoso amigo e colega de curso: [João Gomes](https://github.com/JoaoGomeszs/)!
+<br><br>
+<details>
+<summary>Tabela de conteúdos (Clique para mostrar)</summary>
+
+- [Introdução](#introdução)
+    - [XAMPP](#xampp)
+    - [Iniciando o MySQL](#iniciando-o-mysql)
+- [Sintaxe Básica e Boas Práticas](#sintaxe-básica-e-boas-práticas)
+    - [Sintaxe](#sintaxe)
+    - [Boas práticas](#boas-práticas)
+- [Visualizando, criando e utilizando um banco de dados](#visualizando-criando-e-utilizando-um-banco-de-dados)
+    - [Visualizar os bancos de dados já criados](#comando-para-visualizar-os-bancos-de-dados-já-criados)
+    - [Criar um novo banco de dados](#comando-para-criar-um-novo-banco-de-dados)
+    - [Utilizar o banco de dados desejado](#comando-para-utilizar-o-banco-de-dados-desejado)
+- [Tipos de dados](#tipos-de-dados)
+    - [Numéricos (Numerics)](#numéricos-numerics)
+    - [Cadeia de caracteres (String)](#cadeia-de-caracteres-string)
+    - [Temporais (Date and Time)](#temporais-date-and-time)
+- [Visualizando, criando e descrevendo uma tabela](#visualizando-criando-e-descrevendo-uma-tabela)
+    - [Visualizar as tabelas já criadas no banco de dados](#visualizar-as-tabelas-já-criadas-no-banco-de-dados)
+    - [Criar uma nova tabela](#criar-uma-nova-tabela)
+    - [Descrever as informações da tabela](#descrever-as-informações-da-tabela--exemplo-visual)
+</details>
 
 <br>
-
 <h2 align="center">Introdução</h2>
 <h3>XAMPP</h3>
 Esse repositório foi inicialmente criado e planejado com a utilização da compilação de softwares livres <strong>XAMPP</strong> como base, então resultados e algumas instruções podem possivelmente variar.
@@ -43,7 +65,7 @@ mysql -h localhost -u root -p
 
 <h2 align="center">Visualizando, criando e utilizando um banco de dados</h2>
 <p align="center">PS: Estarei utilizando o nome "db_github" como exemplo, mas pode ser qualquer nome!</p>
-<h4>Comando para visualizar os bancos de dados atualmente disponíveis para uso:</h4>
+<h4>Comando para visualizar os bancos de dados já criados:</h4>
 
 ```shell
 SHOW DATABASES;
@@ -63,18 +85,32 @@ USE db_github;
 
 <h2 align="center">Tipos de dados</h2>
 <h3>Até o momento, utilizei os seguintes tipos de dados:</h3>
+
+<h4>Numéricos (Numerics):</h4>
+<ul>
+  <li><b>INTEGER()</b> ou <b>INT()</b></li>
+  Utilizado para valores exatos e inteiros, declarado em conjunto de um limite de casas numéricas dentro do parênteses;<br>
+  Exemplo: INT(2) - Limita a quantidade de casas numéricas para 2, então 99 seria aceito, mas 100 não;<br>
+</ul>
+
+> [!NOTE]
+> Ao inserir valores do tipo númerico, não os colocar dentro de aspas.
+
+<h4>Cadeia de caracteres (String):</h4>
 <ul>
   <li><b>VARCHAR()</b></li>
-  É um tipo de dado "string", declarado em conjunto de um limite de caracteres dentro do parênteses;<br>
+  Utilizado para armazenar uma sequência de caracteres com tamanhos variados, declarado em conjunto de um limite de caracteres dentro do parênteses;<br>
   Exemplo: VARCHAR(50) - Limita a quantidade de caracteres para 50;<br>
-  Ao inserir valores do tipo string, sempre os coloque dentro de aspas "".
-  <li><b>INTEGER()</b> ou <b>INT()</b></li>
-  É um tipo de dado númerico para valores exatos e inteiros, declarado em conjunto de um limite de casas numéricas dentro do parênteses;<br>
-  Exemplo: INT(2) - Limita a quantidade de casas numéricas para 2, então 99 seria aceito, mas 100 não;<br>
-  Ao inserir valores do tipo númerico, não os colocar dentro de aspas "".
+</ul>
+
+> [!NOTE]
+> Ao inserir valores do tipo string, sempre os coloque dentro de aspas ("").
+
+<h4>Temporais (Date and Time):</h4>
+<ul>
   <li><b>DATE</b></li>
   Um tipo de dado para valores de datas no formato internacional (YYYY-MM-DD);<br>
-  Ao inserir valores do tipo DATE, sempre os coloque dentro de aspas "", ou serão exibidos como 0000-00-00.
+  Ao inserir valores do tipo DATE, sempre os coloque dentro de aspas (""), ou serão exibidos como 0000-00-00.
 </ul>
 
 <h2 align="center">Visualizando, criando e descrevendo uma tabela</h2>
@@ -97,7 +133,7 @@ SHOW TABLES;
 CREATE TABLE tb_pessoas(exemplo_nome VARCHAR(50), exemplo_idade INT(3));
 ```
 
-<h3>Descrever as informações da tabela (+ Exemplo visual):</h3>
+<h4>Descrever as informações da tabela (+ Exemplo visual):</h4>
 
 ```shell
 DESC tb_pessoas;
