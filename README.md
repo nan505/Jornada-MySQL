@@ -38,7 +38,7 @@ mysql -h localhost -u root -p
 <h3>Boas práticas:</h3>
 <ul>
   <li>Comandos do MySQL sempre em letras maiúsculas (UPPERCASE);</li>
-  <li>Nomes atribuídos ao banco de dados, tabelas tipos de dados, etc. sempre em letras minúsculas (lowercase).</li>
+  <li>Nomes atribuídos ao banco de dados, tabelas, tipos de dados, etc. sempre em letras minúsculas (lowercase).</li>
 </ul>
 
 <h2 align="center">Visualizando, criando e utilizando um banco de dados</h2>
