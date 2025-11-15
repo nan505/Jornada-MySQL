@@ -100,7 +100,7 @@ USE db_github;
 <ul>
   <li><b>VARCHAR()</b></li>
   Utilizado para armazenar uma sequência de caracteres com tamanhos variados, declarado em conjunto de um limite de caracteres dentro do parênteses;<br>
-  Exemplo: VARCHAR(50) - Limita a quantidade de caracteres para 50;<br>
+  Exemplo: VARCHAR(50) - Limita a quantidade máxima de caracteres para 50;<br>
 </ul>
 
 > [!NOTE]
