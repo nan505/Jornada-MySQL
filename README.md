@@ -12,7 +12,7 @@ Esse projeto foi fortemente inspirado pelo repositório [Jornada JavaScript](htt
     - [XAMPP](#xampp)
     - [Iniciando o MySQL](#iniciando-o-mysql)
 - [Sintaxe Básica e Boas Práticas](#sintaxe-básica-e-boas-práticas)
-    - [Sintaxe](#sintaxe)
+    - [Sintaxe básica](#sintaxe-básica)
     - [Boas práticas](#boas-práticas)
 - [Visualizando, criando e utilizando um banco de dados](#visualizando-criando-e-utilizando-um-banco-de-dados)
     - [Visualizar os bancos de dados já criados](#comando-para-visualizar-os-bancos-de-dados-já-criados)
@@ -47,7 +47,7 @@ mysql -h localhost -u root -p
 > - Por padrão, basta apenas apertar a tecla "ENTER" para ter acesso ao MySQL (MariaDB).
 
 <h2 align="center">Sintaxe Básica e Boas Práticas</h2>
-<h3>Sintaxe:</h3>
+<h3>Sintaxe básica:</h3>
 <ul>
   <li>Todos os comandos precisam ser finalizados com ponto e vírgula (;);</li><br>
   <li>Ao inserir uma linha de comando incompleta, o CMD exibirá uma setinha (->):<br>
