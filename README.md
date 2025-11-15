@@ -89,7 +89,7 @@ USE db_github;
 <h4>Numéricos (Numerics):</h4>
 <ul>
   <li><b>INTEGER()</b> ou <b>INT()</b></li>
-  Utilizado para valores exatos e inteiros, declarado em conjunto de um limite de casas numéricas dentro do parênteses;<br>
+  Utilizado para valores exatos e inteiros, declarado em conjunto de um limite máximo de casas numéricas dentro do parênteses;<br>
   Exemplo: INT(2) - Limita a quantidade de casas numéricas para 2, então 99 seria aceito, mas 100 não;<br>
 </ul>
 
