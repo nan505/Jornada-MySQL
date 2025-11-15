@@ -20,6 +20,9 @@ Esse repositório foi inicialmente criado e planejado com a utilização da comp
 ```shell
 mysql -h localhost -u root -p
 ```
+> [!NOTE]
+> - Ao inserir esse comando, o CMD solicitará uma senha (Enter password: );<br>
+> - Por padrão, basta apenas apertar a tecla "ENTER" para ter acesso ao MySQL (MariaDB).
 
 <h2 align="center">Sintaxe Básica e Boas Práticas</h2>
 <h3>Sintaxe:</h3>
