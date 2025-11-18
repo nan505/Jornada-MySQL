@@ -26,6 +26,9 @@ Esse projeto foi fortemente inspirado pelo repositório [Jornada JavaScript](htt
     - [Visualizar as tabelas já criadas no banco de dados](#visualizar-as-tabelas-já-criadas-no-banco-de-dados)
     - [Criar uma nova tabela](#criar-uma-nova-tabela)
     - [Descrever as informações da tabela](#descrever-as-informações-da-tabela--exemplo-visual)
+- [Inserindo e selecionando valores de uma tabela](#inserindo-e-selecionando-valores-de-uma-tabela)
+    - [Inserir novos valores em uma tabela](#inserir-novos-valores-em-uma-tabela)
+    - [Selecionando valores de uma tabela](#selecionando-valores-de-uma-tabela)
 </details>
 
 <br>
@@ -150,3 +153,46 @@ DESC tb_pessoas;
 
 > [!WARNING]
 > A tabela acima não deve ser copiada, e serve apenas para visualizar como seria o resultado do comando "DESC"!
+
+<h2 align="center">Inserindo e selecionando valores de uma tabela</h2>
+
+<h3>Inserir novos valores em uma tabela:</h3>
+
+> [!IMPORTANT]
+> - Para inserir um novo valor em uma tabela, é necessário atribuí-lo a pelo menos um tipo de dado;
+> - Exemplo: Um valor que represente uma pessoa seria atribuído aos tipos de dado "nome" e "idade";
+> - Os valores (VALUE) devem ser separados por vírgula e colocados em ordem, como no exemplo abaixo: 
+
+```shell
+INSERT INTO tb_pessoas (exemplo_nome, exemplo_idade) VALUE ("Nan", 19);
+```
+
+<h3>Selecionando valores de uma tabela:</h3>
+
+> [!TIP]
+> - O comando "SELECT" serve para visualizar os valores de uma tabela;
+> - Pode ser usado para visualizar todos os valores inseridos, ou valores específicos;
+
+<h4>Selecionar todos os valores da tabela:</h4>
+
+```shell
+SELECT * FROM tb_pessoas;
+```
+
+<h4>Selecionar valores específicos de uma tabela pelos seus tipos de dado:</h4>
+<ul>
+    <li>Comando para selecionar todos os valores da tabela "tb_pessoas" que possuem o tipo de dado "exemplo_nome":</li>
+</ul>
+
+```shell
+SELECT exemplo_nome FROM tb_pessoas;
+```
+
+<h4>Selecionar valores específicos de uma tabela pelas suas atribuições:</h4>
+<ul>
+    <li>Comando para selecionar o valor da tabela que possui o tipo de dado "exemplo_nome" atribuído como "Nan":</li>
+</ul>
+
+```shell
+SELECT * FROM tb_pessoas WHERE exemplo_nome = “Nan”;
+```
