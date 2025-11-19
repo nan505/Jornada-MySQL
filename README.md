@@ -29,6 +29,10 @@ Esse projeto foi fortemente inspirado pelo repositório [Jornada JavaScript](htt
 - [Inserindo e selecionando valores de uma tabela](#inserindo-e-selecionando-valores-de-uma-tabela)
     - [Inserir novos valores em uma tabela](#inserir-novos-valores-em-uma-tabela)
     - [Selecionando valores de uma tabela](#selecionando-valores-de-uma-tabela)
+- [Incremento Automático (AUTO_INCREMENT)](#incremento-automático-auto_increment)
+    - [Não Nulo (NOT NULL)](#não-nulo-not-null)
+    - [Chave Primária (PRIMARY KEY)](#chave-primária-primary-key)
+    - [Criando uma tabela com coluna de incremento automático](#criando-uma-tabela-com-coluna-de-incremento-automático)
 </details>
 
 <br>
@@ -93,7 +97,11 @@ USE db_github;
 <ul>
   <li><b>INTEGER()</b> ou <b>INT()</b></li>
   Utilizado para valores exatos e inteiros, declarado em conjunto de um limite máximo de casas numéricas dentro do parênteses;<br>
-  Exemplo: INT(2) - Limita a quantidade de casas numéricas para 2, então 99 seria aceito, mas 100 não;<br>
+  Exemplo: INT(2) - Limita a quantidade de casas numéricas para 2, então 99 seria aceito, mas 100 não.<br><br>
+  <li><b>DECIMAL()</b></li>
+  Utilizado para valores quebrados (números com vírgula), declarado em conjunto de um limite máximo de casas numéricas dentro dos parênteses.
+  O primeiro valor declarado dentro do parênteses será o limite de casas númericas antes da vírgula, e o segundo será o limite de casas depois da vírgula;<br>
+  Exemplo: DECIMAL(4,2) - Limita a quantidade de casas numéricas antes da vírgula para 4, enquanto as casas após a vírgula serão limitadas para 2.
 </ul>
 
 > [!NOTE]
@@ -128,7 +136,7 @@ SHOW TABLES;
 <h3>Criar uma nova tabela:</h3>
 
 > [!IMPORTANT]  
-> - Ao criar uma nova tabela, ao menos um tipo de dado (ou coluna) precisa ser adicionado;<br>
+> - Ao criar uma nova tabela, ao menos um tipo de dado (coluna) precisa ser adicionado;<br>
 > - Os nomes e tipos de dados devem ser todos declarados dentro de parênteses ();<br>
 > - Para inserir vários tipos de dados no mesmo comando, separe-os com vírgulas (,).
 
@@ -179,9 +187,9 @@ INSERT INTO tb_pessoas (exemplo_nome, exemplo_idade) VALUE ("Nan", 19);
 SELECT * FROM tb_pessoas;
 ```
 
-<h4>Selecionar valores específicos de uma tabela pelos seus tipos de dado:</h4>
+<h4>Selecionar valores específicos de uma tabela pelas colunas:</h4>
 <ul>
-    <li>Comando para selecionar todos os valores da tabela "tb_pessoas" que possuem o tipo de dado "exemplo_nome":</li>
+    <li>Selecionar todos os valores da tabela "tb_pessoas" que possuem atribuições na coluna "exemplo_nome":</li>
 </ul>
 
 ```shell
@@ -190,7 +198,7 @@ SELECT exemplo_nome FROM tb_pessoas;
 
 <h4>Selecionar valores específicos de uma tabela pelas suas atribuições:</h4>
 <ul>
-    <li>Comando para selecionar o valor da tabela que possui o tipo de dado "exemplo_nome" atribuído como "Nan":</li>
+    <li>Selecionar o valor da tabela que possui a coluna "exemplo_nome" atribuída como "Nan":</li>
 </ul>
 
 ```shell
@@ -199,12 +207,39 @@ SELECT * FROM tb_pessoas WHERE exemplo_nome = “Nan”;
 
 <h2 align="center">Incremento Automático (AUTO_INCREMENT)</h2>
 <h3>Introdução:</h3>
-O incremento automático possui a função de atribuir valores a uma determinada coluna automaticamente, sem a necessidade preenchê-la de forma manual. É normalmente utilizado na criação de IDs únicos em uma tabela, assim diferenciando valores de forma precisa e única!
+O incremento automático possui a função de atribuir valores a uma determinada coluna automaticamente, sem a necessidade preenchê-la de forma manual. É normalmente utilizado na criação de IDs únicos em uma tabela, assim diferenciando seus valores de forma exata e precisa.
 <h3>Requerimentos:</h3>
 Para a declaração do incremento automático, primeiro precisamos cumprir os seguintes requerimentos:
 
 <h4>Não Nulo (NOT NULL):</h4>
 <ul>
     <li>Por padrão, todos os tipos de dados declarados podem armazenar valores nulos, ou seja, sem um valor especificado;</li>
-    <li>Ao declarar um tipo de dado com o "NOT NULL", todos os valores atribuídos na tabela precisam de um valor definido na coluna especificada.</li>
+    <li>Ao declarar um tipo de dado (coluna) como "NOT NULL", todos os valores inseridos na tabela precisam de um valor definido na coluna especificada.</li>
 </ul>
+
+<h4>Chave Primária (PRIMARY KEY):</h4>
+<ul>
+    <li>A chave primária é declarada em uma coluna de importância vital para a tabela;</li>
+    <li>Sua função é otimizar e melhorar a performance da coluna, geralmente a de IDs únicos.</li>
+</ul>
+
+<h3>Criando uma tabela com coluna de incremento automático:</h3>
+
+Todos os comandos apresentados nessa seção serão utilizados em conjunto do "AUTO_INCREMENT" para declararmos uma coluna, ou seja:
+<ul>
+    <li>Uma coluna que não poderá armazenar valores nulos (NOT NULL);</li>
+    <li>Estabelecida como chave primária (PRIMARY KEY).</li>
+</ul>
+
+> [!NOTE]
+> - Não é necessário criar uma nova tabela para definir uma coluna com essas características;
+> - Esse é apenas um exemplo, e a forma que eu inicialmente aprendi!
+
+<h4>Criar uma tabela com coluna de incremento automático:</h4>
+
+```shell
+CREATE TABLE tb_exemplo(id_unico INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT);
+```
+
+> [!IMPORTANT]
+> Todos os comandos são separados apenas por espaço, sem o uso de vírgula (,).
