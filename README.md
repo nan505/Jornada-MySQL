@@ -196,3 +196,15 @@ SELECT exemplo_nome FROM tb_pessoas;
 ```shell
 SELECT * FROM tb_pessoas WHERE exemplo_nome = “Nan”;
 ```
+
+<h2 align="center">Incremento Automático (AUTO_INCREMENT)</h2>
+<h3>Introdução:</h3>
+O incremento automático possui a função de atribuir valores a uma determinada coluna automaticamente, sem a necessidade preenchê-la de forma manual. É normalmente utilizado na criação de IDs únicos em uma tabela, assim diferenciando valores de forma precisa e única!
+<h3>Requerimentos:</h3>
+Para a declaração do incremento automático, primeiro precisamos cumprir os seguintes requerimentos:
+
+<h4>Não Nulo (NOT NULL):</h4>
+<ul>
+    <li>Por padrão, todos os tipos de dados declarados podem armazenar valores nulos, ou seja, sem um valor especificado;</li>
+    <li>Ao declarar um tipo de dado com o "NOT NULL", todos os valores atribuídos na tabela precisam de um valor definido na coluna especificada.</li>
+</ul>
