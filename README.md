@@ -207,7 +207,7 @@ SELECT * FROM tb_pessoas WHERE exemplo_nome = “Nan”;
 
 <h2 align="center">Incremento Automático (AUTO_INCREMENT)</h2>
 <h3>Introdução:</h3>
-O incremento automático possui a função de atribuir valores a uma determinada coluna automaticamente, sem a necessidade preenchê-la de forma manual. É normalmente utilizado na criação de IDs únicos em uma tabela, assim diferenciando seus valores de forma exata e precisa.
+O incremento automático possui a função de atribuir valores únicos, em ordem crescente, a uma determinada coluna de forma automática, sem a necessidade preenchê-la manualmente. É normalmente utilizado na criação de IDs únicos em uma tabela, assim diferenciando seus valores de forma exata e precisa.
 <h3>Requerimentos:</h3>
 Para a declaração do incremento automático, primeiro precisamos cumprir os seguintes requerimentos:
 
