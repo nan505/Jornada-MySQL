@@ -46,9 +46,10 @@ Esse repositório foi inicialmente criado e planejado com a utilização da comp
   <li>Na recém aberta janela do CMD, insira o seguinte código:</li>
 </ul>
 
-```shell
+```sh
 mysql -h localhost -u root -p
 ```
+
 > [!NOTE]
 > - Ao inserir esse comando, o CMD solicitará uma senha (Enter password: );<br>
 > - Por padrão, basta apenas apertar a tecla "ENTER" para ter acesso ao MySQL (MariaDB).
@@ -74,19 +75,19 @@ mysql -h localhost -u root -p
 <p align="center">PS: Estarei utilizando o nome "db_github" como exemplo, mas pode ser qualquer nome!</p>
 <h4>Comando para visualizar os bancos de dados já criados:</h4>
 
-```shell
+```sh
 SHOW DATABASES;
 ```
 
 <h4>Comando para criar um novo banco de dados:</h4>
 
-```shell
+```sh
 CREATE DATABASE db_github;
 ```
 
 <h4>Comando para utilizar o banco de dados desejado:</h4>
 
-```shell
+```sh
 USE db_github;
 ```
 
@@ -129,7 +130,7 @@ USE db_github;
 <p align="center">PPS: Estarei utilizando o nome "tb_pessoas" como exemplo, mas pode ser qualquer nome!</p>
 <h4>Visualizar as tabelas já criadas no banco de dados:</h4>
 
-```shell
+```sh
 SHOW TABLES;
 ```
 
@@ -140,17 +141,17 @@ SHOW TABLES;
 > - Os nomes e tipos de dados devem ser todos declarados dentro de parênteses ();<br>
 > - Para inserir vários tipos de dados no mesmo comando, separe-os com vírgulas (,).
 
-```shell
+```sh
 CREATE TABLE tb_pessoas(exemplo_nome VARCHAR(50), exemplo_idade INT(3));
 ```
 
 <h4>Descrever as informações da tabela (+ Exemplo visual):</h4>
 
-```shell
+```sh
 DESC tb_pessoas;
 ```
 
-```shell
+```sh
 +---------------+-------------+------+-----+---------+-------+
 | Field         | Type        | Null | Key | Default | Extra |
 +---------------+-------------+------+-----+---------+-------+
@@ -171,7 +172,7 @@ DESC tb_pessoas;
 > - Exemplo: Um valor que represente uma pessoa seria atribuído aos tipos de dado "nome" e "idade";
 > - Os valores (VALUE) devem ser separados por vírgula e colocados em ordem, como no exemplo abaixo: 
 
-```shell
+```sh
 INSERT INTO tb_pessoas (exemplo_nome, exemplo_idade) VALUE ("Nan", 19);
 ```
 
@@ -183,7 +184,7 @@ INSERT INTO tb_pessoas (exemplo_nome, exemplo_idade) VALUE ("Nan", 19);
 
 <h4>Selecionar todos os valores da tabela:</h4>
 
-```shell
+```sh
 SELECT * FROM tb_pessoas;
 ```
 
@@ -192,7 +193,7 @@ SELECT * FROM tb_pessoas;
     <li>Selecionar todos os valores da tabela "tb_pessoas" que possuem atribuições na coluna "exemplo_nome":</li>
 </ul>
 
-```shell
+```sh
 SELECT exemplo_nome FROM tb_pessoas;
 ```
 
@@ -201,7 +202,7 @@ SELECT exemplo_nome FROM tb_pessoas;
     <li>Selecionar o valor da tabela que possui a coluna "exemplo_nome" atribuída como "Nan":</li>
 </ul>
 
-```shell
+```sh
 SELECT * FROM tb_pessoas WHERE exemplo_nome = “Nan”;
 ```
 
@@ -237,7 +238,7 @@ Todos os comandos apresentados nessa seção serão utilizados em conjunto do "A
 
 <h4>Criar uma tabela com coluna de incremento automático:</h4>
 
-```shell
+```sh
 CREATE TABLE tb_exemplo(id_unico INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT);
 ```
 
