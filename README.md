@@ -3,8 +3,12 @@
 <h2>Sobre mim e a Jornada MySQL:</h2>
 
 Prazer, podem me chamar de Nan! Atualmente estou fazendo um curso de T.I. e decidi "documentar" meus aprendizados sobre MySQL por meio desse repositório!
-Esse projeto foi fortemente inspirado pelo repositório [Jornada JavaScript](https://github.com/JoaoGomeszs/Jornada-JavaScript), do meu extremamente talentoso amigo e colega de curso: [João Gomes](https://github.com/JoaoGomeszs/)!
-<br><br>
+Esse projeto foi fortemente inspirado pela [Jornada JavaScript](https://github.com/JoaoGomeszs/Jornada-JavaScript), do meu extremamente talentoso amigo e colega de curso: [João Gomes](https://github.com/JoaoGomeszs/)!
+
+> [!IMPORTANT]
+> Ao longo da jornada, estarei utilizando o realce de sintaxe do SQL nos blocos de código para facilitar a visualização de certos comandos, declarações, tabelas, etc. A Jornada MySQL foi criada com o intuito de auxiliar e documentar apenas o meu aprendizado pessoal sobre o sistema, [consulte a documentação oficial do MySQL por aqui.](https://dev.mysql.com/doc/)
+
+<br>
 <details>
 <summary>Tabela de conteúdos (Clique para mostrar)</summary>
 
@@ -46,7 +50,7 @@ Esse repositório foi inicialmente criado e planejado com a utilização da comp
   <li>Na recém aberta janela do CMD, insira o seguinte código:</li>
 </ul>
 
-```sh
+```cmd
 mysql -h localhost -u root -p
 ```
 
@@ -75,19 +79,19 @@ mysql -h localhost -u root -p
 <p align="center">PS: Estarei utilizando o nome "db_github" como exemplo, mas pode ser qualquer nome!</p>
 <h4>Comando para visualizar os bancos de dados já criados:</h4>
 
-```sh
+```sql
 SHOW DATABASES;
 ```
 
 <h4>Comando para criar um novo banco de dados:</h4>
 
-```sh
+```sql
 CREATE DATABASE db_github;
 ```
 
 <h4>Comando para utilizar o banco de dados desejado:</h4>
 
-```sh
+```sql
 USE db_github;
 ```
 
@@ -130,7 +134,7 @@ USE db_github;
 <p align="center">PPS: Estarei utilizando o nome "tb_pessoas" como exemplo, mas pode ser qualquer nome!</p>
 <h4>Visualizar as tabelas já criadas no banco de dados:</h4>
 
-```sh
+```sql
 SHOW TABLES;
 ```
 
@@ -141,17 +145,17 @@ SHOW TABLES;
 > - Os nomes e tipos de dados devem ser todos declarados dentro de parênteses ();<br>
 > - Para inserir vários tipos de dados no mesmo comando, separe-os com vírgulas (,).
 
-```sh
+```sql
 CREATE TABLE tb_pessoas(exemplo_nome VARCHAR(50), exemplo_idade INT(3));
 ```
 
 <h4>Descrever as informações da tabela (+ Exemplo visual):</h4>
 
-```sh
+```sql
 DESC tb_pessoas;
 ```
 
-```sh
+```sql
 +---------------+-------------+------+-----+---------+-------+
 | Field         | Type        | Null | Key | Default | Extra |
 +---------------+-------------+------+-----+---------+-------+
@@ -172,7 +176,7 @@ DESC tb_pessoas;
 > - Exemplo: Um valor que represente uma pessoa seria atribuído aos tipos de dado "nome" e "idade";
 > - Os valores (VALUE) devem ser separados por vírgula e colocados em ordem, como no exemplo abaixo: 
 
-```sh
+```sql
 INSERT INTO tb_pessoas (exemplo_nome, exemplo_idade) VALUE ("Nan", 19);
 ```
 
@@ -184,7 +188,7 @@ INSERT INTO tb_pessoas (exemplo_nome, exemplo_idade) VALUE ("Nan", 19);
 
 <h4>Selecionar todos os valores da tabela:</h4>
 
-```sh
+```sql
 SELECT * FROM tb_pessoas;
 ```
 
@@ -193,7 +197,7 @@ SELECT * FROM tb_pessoas;
     <li>Selecionar todos os valores da tabela "tb_pessoas" que possuem atribuições na coluna "exemplo_nome":</li>
 </ul>
 
-```sh
+```sql
 SELECT exemplo_nome FROM tb_pessoas;
 ```
 
@@ -202,7 +206,7 @@ SELECT exemplo_nome FROM tb_pessoas;
     <li>Selecionar o valor da tabela que possui a coluna "exemplo_nome" atribuída como "Nan":</li>
 </ul>
 
-```sh
+```sql
 SELECT * FROM tb_pessoas WHERE exemplo_nome = “Nan”;
 ```
 
@@ -238,7 +242,7 @@ Todos os comandos apresentados nessa seção serão utilizados em conjunto do "A
 
 <h4>Criar uma tabela com coluna de incremento automático:</h4>
 
-```sh
+```sql
 CREATE TABLE tb_exemplo(id_unico INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT);
 ```
 
