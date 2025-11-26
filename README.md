@@ -40,6 +40,9 @@ Esse projeto foi fortemente inspirado pela [Jornada JavaScript](https://github.c
     - [Não Nulo (NOT NULL)](#não-nulo-not-null)
     - [Chave Primária (PRIMARY KEY)](#chave-primária-primary-key)
     - [Criando uma tabela com coluna de incremento automático](#criando-uma-tabela-com-coluna-de-incremento-automático)
+- [Alterar Tabela (ALTER TABLE)](#alterar-tabela-alter-table)
+    - [Adicionar nova coluna em uma tabela](#adicionar-nova-coluna-em-uma-tabela)
+    - [Deletar coluna existente de uma tabela](#deletar-coluna-existente-de-uma-tabela)
 </details>
 
 <br>
@@ -204,6 +207,12 @@ DESC tb_pessoas;
 INSERT INTO tb_pessoas (exemplo_nome, exemplo_idade) VALUE ("Nan", 19);
 ```
 
+- Para inserirmos mais de um valor em uma tabela no mesmo comando, utilizamos a declaração "VALUE", como no exemplo abaixo:
+
+```sql
+INSERT INTO tb_pessoas (exemplo_nome, exemplo_idade) VALUES ("Nan", 19), ("Nana", 20);
+```
+
 <h3>Selecionando valores de uma tabela:</h3>
 
 > [!TIP]
@@ -272,3 +281,25 @@ CREATE TABLE tb_exemplo(id_unico INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT);
 
 > [!IMPORTANT]
 > Todos os comandos são separados apenas por espaço, sem o uso de vírgula (,).
+
+<h2 align="center">Alterar Tabela (ALTER TABLE)</h2>
+<h3>Introdução:</h3>
+A declaração "ALTER TABLE" possui a função de modificar a estrutura de uma tabela para diversas finalidades. Nos exemplos a seguir, estaremos a utilizando para a adicionarmos e removermos colunas de uma tabela!
+
+<h4>Adicionar nova coluna em uma tabela:</h4>
+<ul>
+    <li>Alterar a tabela "tb_exemplo" para adicionar a coluna "exemplo_sobrenome":</li>
+</ul>
+
+```sql
+ALTER TABLE tb_exemplo ADD exemplo_sobrenome VARCHAR(50);
+```
+
+<h4>Deletar coluna existente de uma tabela:</h4>
+<ul>
+    <li>Alterar a tabela "tb_exemplo" para remover a coluna "exemplo_sobrenome":</li>
+</ul>
+
+```sql
+ALTER TABLE tb_exemplo DROP COLUMN exemplo_sobrenome;
+```
