@@ -75,6 +75,11 @@ mysql -h localhost -u root -p
   <li>Nomes atribuídos ao banco de dados, tabelas, tipos de dados, etc. sempre em letras minúsculas (lowercase).</li>
 </ul>
 
+<h2 align="center">Ferramentas recomendadas</h2>
+<h3>DB Designer</h3>
+
+Para criar diagramas entidade-relacionamento (DER) do banco de dados MySQL, estarei inicialmente utilizando o site [DB Designer](https://www.dbdesigner.net/) por sua intuitividade, mas o [dbdiagram.io](https://dbdiagram.io/home) é uma alternativa recomendada.
+
 <h2 align="center">Visualizando, criando e utilizando um banco de dados</h2>
 <p align="center">PS: Estarei utilizando o nome "db_github" como exemplo, mas pode ser qualquer nome!</p>
 <h4>Comando para visualizar os bancos de dados já criados:</h4>
