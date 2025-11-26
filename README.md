@@ -18,6 +18,9 @@ Esse projeto foi fortemente inspirado pela [Jornada JavaScript](https://github.c
 - [Sintaxe Básica e Boas Práticas](#sintaxe-básica-e-boas-práticas)
     - [Sintaxe básica](#sintaxe-básica)
     - [Boas práticas](#boas-práticas)
+- [Ferramentas Recomendadas](#ferramentas-recomendadas)
+    - [DB Designer e dbdiagram.io](#db-designer-e-dbdiagramio-sites)
+    - [MySQL (Extensão do VS Code)](#mysql-extensão-do-vs-code)
 - [Visualizando, criando e utilizando um banco de dados](#visualizando-criando-e-utilizando-um-banco-de-dados)
     - [Visualizar os bancos de dados já criados](#comando-para-visualizar-os-bancos-de-dados-já-criados)
     - [Criar um novo banco de dados](#comando-para-criar-um-novo-banco-de-dados)
@@ -75,10 +78,26 @@ mysql -h localhost -u root -p
   <li>Nomes atribuídos ao banco de dados, tabelas, tipos de dados, etc. sempre em letras minúsculas (lowercase).</li>
 </ul>
 
-<h2 align="center">Ferramentas recomendadas</h2>
-<h3>DB Designer</h3>
+<h2 align="center">Ferramentas Recomendadas</h2>
+<h3>DB Designer e dbdiagram.io (Sites)</h3>
 
-Para criar diagramas entidade-relacionamento (DER) do banco de dados MySQL, estarei inicialmente utilizando o site [DB Designer](https://www.dbdesigner.net/) por sua intuitividade, mas o [dbdiagram.io](https://dbdiagram.io/home) é uma alternativa recomendada.
+Para criar diagramas entidade-relacionamento (DER) do banco de dados MySQL, estarei inicialmente utilizando o site [DB Designer](https://www.dbdesigner.net/) por sua intuitividade, mas o [dbdiagram.io](https://dbdiagram.io/home) é a opção mais recomendada.
+
+<h3>MySQL (Extensão do VS Code)</h3>
+
+Facilitando o gerenciamento do banco de dados por meio de uma extensão para o Visual Studio Code distribuída pela Database Client, o [MySQL](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2) é uma ferramenta prática e conveniente, mas necessita de alguns passos e configurações para o seu funcionamento adequado:
+
+- Após instalar a extensão, certifique-se de que o banco de dados MySQL está inicializado por meio do XAMPP Control Panel;
+- Dois novos ícones devem aparecer na barra lateral do VS Code, clique no ícone de cilindro "Database";
+- Na seção Database, clique em "Create Connection" e copie as seguintes configurações:<br><br>
+    - Server Type: MySQL
+    - Host: localhost
+    - Port: 3306
+    - Username: root<br><br>
+- Agora, clique em "Connect" e a extensão deve estar pronta para gerenciar o banco de dados!
+
+> [!WARNING]
+> A documentação da Jornada MySQL não foi pensada e/ou adaptada para a extensão "MySQL", do Visual Studio Code. Todos os comandos ainda podem ser realizados por meio da extensão, mas por sua conta e risco.
 
 <h2 align="center">Visualizando, criando e utilizando um banco de dados</h2>
 <p align="center">PS: Estarei utilizando o nome "db_github" como exemplo, mas pode ser qualquer nome!</p>
