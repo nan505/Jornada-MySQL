@@ -2,7 +2,7 @@
 <br>
 <h2>Sobre mim e a Jornada MySQL:</h2>
 
-Prazer, podem me chamar de Nan! Atualmente estou fazendo um curso de T.I. e decidi "documentar" meus aprendizados sobre MySQL por meio desse repositório!
+Prazer, podem me chamar de Nan! Atualmente estou cursando T.I. e decidi compartilhar e "documentar" meus aprendizados sobre MySQL por meio desse repositório!
 Esse projeto foi fortemente inspirado pela [Jornada JavaScript](https://github.com/JoaoGomeszs/Jornada-JavaScript), do meu extremamente talentoso amigo e colega de curso: [João Gomes](https://github.com/JoaoGomeszs/)!
 
 > [!IMPORTANT]
