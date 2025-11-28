@@ -43,6 +43,11 @@ Esse projeto foi fortemente inspirado pela [Jornada JavaScript](https://github.c
 - [Alterar Tabela (ALTER TABLE)](#alterar-tabela-alter-table)
     - [Adicionar nova coluna em uma tabela](#adicionar-nova-coluna-em-uma-tabela)
     - [Deletar coluna existente de uma tabela](#deletar-coluna-existente-de-uma-tabela)
+- [Atualizando as informações de uma tabela (UPDATE)](#atualizando-as-informações-de-uma-tabela-update)
+    - [Condições](#condições)
+        - [Definir (SET)](#definir-set)
+        - [Onde (WHERE)](#onde-where)
+    - [Atualizar as informações de uma tabela](#atualizar-as-informações-de-uma-tabela)
 </details>
 
 <br>
@@ -302,4 +307,35 @@ ALTER TABLE tb_exemplo ADD exemplo_sobrenome VARCHAR(50);
 
 ```sql
 ALTER TABLE tb_exemplo DROP COLUMN exemplo_sobrenome;
+```
+
+<h2 align="center">Atualizando as informações de uma tabela (UPDATE)</h2>
+A declaração "UPDATE" possui a finalidade de atualizar as informações de uma tabela, podendo ser utilizada tanto para modificar informações já existentes em colunas, quanto para adicionar novas informações nas colunas da tabela. Para utilizarmos o "UPDATE", é recomendado que a tabela possua uma coluna de IDs únicos para diferenciar os valores que serão modificados.
+
+<h3>Condições:</h3>
+O "UPDATE" possui algumas condições para ser executado corretamente, e é recomendado que as seguintes condições sejam cumpridas:
+
+<h4>Definir (SET):</h4>
+<ul>
+    <li>A condição "SET" define a coluna que será alterada, e qual será a nova informação adicionada;</li>
+    <li>Até onde eu sei, é uma condição obrigatória.</li>
+</ul>
+
+<h4>Onde (WHERE):</h4>
+<ul>
+    <li>A condição "WHERE" indica as condições que as linhas precisam cumprir para serem selecionadas;</li>
+    <li>Ela indica os requerimentos que as linhas precisam possuir para serem atualizadas;</li>
+    <li>O requerimento geralmente será o valor do ID único da linha desejada;</li>
+</ul>
+
+> [!IMPORTANT]
+> O "WHERE" não é uma condição obrigatória, mas de <b>extrema importância</b> para a utilização segura do "UPDATE".
+
+<h3>Atualizar as informações de uma tabela:</h3>
+<ul>
+    <li>Atualizar a tabela "tb_exemplo", definindo a informação da coluna "exemplo_nomes" como "Nan", onde o "id_unico" da linha é "123":</li>
+</ul>
+
+```sql
+UPDATE tb_exemplo SET exemplo_nome = "Nan" WHERE id_unico = 123;
 ```
