@@ -174,9 +174,9 @@ SHOW TABLES;
 <h3>Criar uma nova tabela:</h3>
 
 > [!IMPORTANT]  
-> - Ao criar uma nova tabela, ao menos um tipo de dado (coluna) precisa ser adicionado;<br>
-> - Os nomes e tipos de dados devem ser todos declarados dentro de parênteses ();<br>
-> - Para inserir vários tipos de dados no mesmo comando, separe-os com vírgulas (,).
+> - Ao criar uma nova tabela, ao menos uma coluna também precisa ser criada;<br>
+> - Os nomes e tipos de dados das colunas devem ser todos declarados dentro de parênteses ();<br>
+> - Para criar várias colunas no mesmo comando, separe-as com vírgulas (,).
 
 ```sql
 CREATE TABLE tb_pessoas(exemplo_nome VARCHAR(50), exemplo_idade INT(3));
@@ -205,15 +205,15 @@ DESC tb_pessoas;
 <h3>Inserir novos valores em uma tabela:</h3>
 
 > [!IMPORTANT]
-> - Para inserir um novo valor em uma tabela, é necessário atribuí-lo a pelo menos um tipo de dado;
-> - Exemplo: Um valor que represente uma pessoa seria atribuído aos tipos de dado "nome" e "idade";
-> - Os valores (VALUE) devem ser separados por vírgula e colocados em ordem, como no exemplo abaixo: 
+> - Para inserir um novo valor (linha) em uma tabela, é necessário atribuí-lo a pelo menos uma coluna;
+> - Exemplo: Valores que representam uma pessoa seriam atribuídos às colunas "nome" e "idade";
+> - Os valores devem ser separados por vírgula e colocados em ordem, como no exemplo abaixo: 
 
 ```sql
 INSERT INTO tb_pessoas (exemplo_nome, exemplo_idade) VALUE ("Nan", 19);
 ```
 
-- Para inserirmos mais de um valor em uma tabela no mesmo comando, utilizamos a declaração "VALUE", como no exemplo abaixo:
+- Para inserirmos mais de um valor em uma tabela no mesmo comando, utilizamos a declaração "VALUES", como no exemplo abaixo:
 
 ```sql
 INSERT INTO tb_pessoas (exemplo_nome, exemplo_idade) VALUES ("Nan", 19), ("Nana", 20);
@@ -233,7 +233,7 @@ SELECT * FROM tb_pessoas;
 
 <h4>Selecionar valores específicos de uma tabela pelas colunas:</h4>
 <ul>
-    <li>Selecionar todos os valores da tabela "tb_pessoas" que possuem atribuições na coluna "exemplo_nome":</li>
+    <li>Selecionar todos os valores da tabela "tb_pessoas" que foram atribuídos na coluna "exemplo_nome":</li>
 </ul>
 
 ```sql
