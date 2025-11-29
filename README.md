@@ -43,6 +43,7 @@ Esse projeto foi fortemente inspirado pela [Jornada JavaScript](https://github.c
 - [Alterar Tabela (ALTER TABLE)](#alterar-tabela-alter-table)
     - [Adicionar nova coluna em uma tabela](#adicionar-nova-coluna-em-uma-tabela)
     - [Deletar coluna existente de uma tabela](#deletar-coluna-existente-de-uma-tabela)
+    - [Mudando o nome e tipo de uma coluna na tabela](#mudando-o-nome-e-tipo-de-uma-coluna-na-tabela)
 - [Atualizando as informações de uma tabela (UPDATE)](#atualizando-as-informações-de-uma-tabela-update)
     - [Condições](#condições)
         - [Definir (SET)](#definir-set)
@@ -307,6 +308,15 @@ ALTER TABLE tb_exemplo ADD exemplo_sobrenome VARCHAR(50);
 
 ```sql
 ALTER TABLE tb_exemplo DROP COLUMN exemplo_sobrenome;
+```
+
+<h4>Mudando o nome e tipo de uma coluna na tabela:</h4>
+<ul>
+    <li>Alterar a tabela "tb_exemplo" para modificar a coluna "coluna_antiga", mudando seu nome para "coluna_nova" e adicionando o tipo de dado "VARCHAR":</li>
+</ul>
+
+```sql
+ALTER TABLE tb_exemplo CHANGE coluna_antiga coluna_nova VARCHAR(50);
 ```
 
 <h2 align="center">Atualizando as informações de uma tabela (UPDATE)</h2>
