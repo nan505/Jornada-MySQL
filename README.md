@@ -319,6 +319,10 @@ ALTER TABLE tb_exemplo DROP COLUMN exemplo_sobrenome;
 ALTER TABLE tb_exemplo CHANGE coluna_antiga coluna_nova VARCHAR(50);
 ```
 
+> [!TIP]
+> - A condição "CHANGE" é extremamente útil para alterar o limite de caracteres ou casas numéricas de uma coluna;
+> - Exemplo: Modificar o tipo de dado e limite de caracteres "VARCHAR(20)" de uma coluna para "VARCHAR(50)".
+
 <h2 align="center">Atualizando as informações de uma tabela (UPDATE)</h2>
 A declaração "UPDATE" possui a finalidade de atualizar as informações de uma tabela, podendo ser utilizada tanto para modificar informações já existentes em colunas, quanto para adicionar novas informações nas colunas da tabela. Para utilizarmos o "UPDATE", é recomendado que a tabela possua uma coluna de IDs únicos para diferenciar os valores que serão modificados.
 
