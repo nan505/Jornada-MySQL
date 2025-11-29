@@ -343,7 +343,7 @@ O "UPDATE" possui algumas condições para ser executado corretamente, e é reco
 
 <h3>Atualizar as informações de uma tabela:</h3>
 <ul>
-    <li>Atualizar a tabela "tb_exemplo", definindo a informação da coluna "exemplo_nomes" como "Nan", onde o "id_unico" da linha é "123":</li>
+    <li>Atualizar a tabela "tb_exemplo", definindo a informação presente na coluna "exemplo_nomes" como "Nan" onde o "id_unico" da linha que será afetada possui o valor "123":</li>
 </ul>
 
 ```sql
