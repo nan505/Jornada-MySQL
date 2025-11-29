@@ -5,8 +5,11 @@
 Prazer, podem me chamar de Nan! Atualmente estou cursando T.I. e decidi compartilhar e "documentar" meus aprendizados sobre MySQL por meio desse repositório!
 Esse projeto foi fortemente inspirado pela [Jornada JavaScript](https://github.com/JoaoGomeszs/Jornada-JavaScript), do meu extremamente talentoso amigo e colega de curso: [João Gomes](https://github.com/JoaoGomeszs/)!
 
+A Jornada MySQL está ativamente recebendo novas atualizações, modificações e correções ao longo do tempo para garantir que todos os conteúdos apresentados sejam fáceis e simples de se entender, mas eficientes e práticos para serem consultados.
+
 > [!IMPORTANT]
-> Ao longo da jornada, estarei utilizando o realce de sintaxe do SQL nos blocos de código para facilitar a visualização de certos comandos, declarações, tabelas, etc. A Jornada MySQL foi criada com o intuito de auxiliar e documentar apenas o meu aprendizado pessoal sobre o sistema, [consulte a documentação oficial do MySQL por aqui.](https://dev.mysql.com/doc/)
+> - Ao longo da jornada, estarei utilizando o realce de sintaxe do SQL nos blocos de código para facilitar a visualização de certos comandos, declarações, tabelas, etc.
+> - <b>A "Jornada MySQL" foi criada para auxiliar e documentar apenas o meu aprendizado pessoal sobre o sistema, e não deve ser vista como uma substituição e/ou alternativa das documentações oficiais.</b> [Consulte a documentação oficial do MySQL por aqui.](https://dev.mysql.com/doc/)
 
 <br>
 <details>
