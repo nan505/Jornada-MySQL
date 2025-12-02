@@ -245,11 +245,20 @@ SELECT exemplo_nome FROM tb_pessoas;
 
 <h4>Selecionar valores específicos de uma tabela pelas suas atribuições:</h4>
 <ul>
-    <li>Selecionar o valor da tabela que possui a coluna "exemplo_nome" atribuída como "Nan":</li>
+    <li>Selecionar todos os valores da tabela que possuem a coluna "exemplo_nome" atribuída como "Nan":</li>
 </ul>
 
 ```sql
 SELECT * FROM tb_pessoas WHERE exemplo_nome = “Nan”;
+```
+
+<h4>Selecionar valores de uma tabela de forma ordenada:</h4>
+<ul>
+    <li>Selecionar todos os valores da tabela e organizá-los por ordem alfabética das atribuições na coluna "exemplo_nome":</li>
+</ul>
+
+```sql
+SELECT * FROM tb_pessoas ORDER BY exemplo_nome;
 ```
 
 <h2 align="center">Incremento Automático (AUTO_INCREMENT)</h2>
