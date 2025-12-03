@@ -142,8 +142,8 @@ USE db_github;
   Exemplo: INT(2) - Limita a quantidade de casas numéricas para 2, então 99 seria aceito, mas 100 não.<br><br>
   <li><b>DECIMAL()</b></li>
   Utilizado para valores quebrados (números com vírgula), declarado em conjunto de um limite máximo de casas numéricas dentro dos parênteses.
-  O primeiro valor declarado dentro do parênteses será o limite de casas númericas antes da vírgula, e o segundo será o limite de casas depois da vírgula;<br>
-  Exemplo: DECIMAL(4,2) - Limita a quantidade de casas numéricas antes da vírgula para 4, enquanto as casas após a vírgula serão limitadas para 2.
+  O primeiro valor declarado dentro do parênteses será o limite de casas númericas antes e após a vírgula, e o segundo será o limite de casas depois da vírgula;<br>
+  Exemplo: DECIMAL(4,2) - Limita a quantidade de casas numéricas antes e após a vírgula para 4, enquanto as casas após a vírgula serão limitadas para 2.
 </ul>
 
 > [!NOTE]
