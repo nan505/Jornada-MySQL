@@ -39,6 +39,7 @@ A Jornada MySQL está ativamente recebendo novas atualizações, modificações 
 - [Inserindo e selecionando valores de uma tabela](#inserindo-e-selecionando-valores-de-uma-tabela)
     - [Inserir novos valores em uma tabela](#inserir-novos-valores-em-uma-tabela)
     - [Selecionando valores de uma tabela](#selecionando-valores-de-uma-tabela)
+        - [Selecionar valores de uma tabela de forma ordenada](#selecionar-valores-de-uma-tabela-de-forma-ordenada) 
 - [Incremento Automático (AUTO_INCREMENT)](#incremento-automático-auto_increment)
     - [Não Nulo (NOT NULL)](#não-nulo-not-null)
     - [Chave Primária (PRIMARY KEY)](#chave-primária-primary-key)
@@ -252,13 +253,23 @@ SELECT exemplo_nome FROM tb_pessoas;
 SELECT * FROM tb_pessoas WHERE exemplo_nome = “Nan”;
 ```
 
-<h4>Selecionar valores de uma tabela de forma ordenada:</h4>
+<h3>Selecionar valores de uma tabela de forma ordenada:</h3>
+Para selecionarmos os valores de uma tabela e os visualizarmos de forma ordenada, utilizamos a condição "ORDER BY" em conjunto das palavras-chaves "<b>ASC</b>" (Padrão ao executar o "ORDER BY", ordem crescente) e "<b>DESC</b>" (Ordem decrescente) da seguinte forma:<br><br>
+
 <ul>
-    <li>Selecionar todos os valores da tabela e organizá-los por ordem alfabética das atribuições na coluna "exemplo_nome":</li>
+    <li>Selecionar todos os valores da tabela e organizá-los por ordem alfabética crescente das atribuições na coluna "exemplo_nome":</li>
 </ul>
 
 ```sql
-SELECT * FROM tb_pessoas ORDER BY exemplo_nome;
+SELECT * FROM tb_pessoas ORDER BY exemplo_nome ASC;
+```
+
+<ul>
+    <li>Selecionar todos os valores da tabela e organizá-los por ordem numérica decrescente das atribuições na coluna "exemplo_idade":</li>
+</ul>
+
+```sql
+SELECT * FROM tb_pessoas ORDER BY exemplo_idade DESC;
 ```
 
 <h2 align="center">Incremento Automático (AUTO_INCREMENT)</h2>
