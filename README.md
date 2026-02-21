@@ -415,7 +415,7 @@ SELECT * FROM tb_amigos WHERE nome LIKE "%A%";
 <h3>E/Ou (AND/OR):</h3>
 <ul>
     <li>Os operadores "AND" e "OR" possuem a finalidade de aplicar um filtro de condições, exibindo apenas os resultados que as cumprirem;</li>
-    <li>Essas condições são aplicadas com a ajuda dos <b>operadores de comparação</b> (=, +, -, !=, <, >, <=, >=)</li>
+    <li>Essas condições são aplicadas com a ajuda dos <b>operadores de comparação</b> (=, !=, <, >, <=, >=)</li>
     <li><b>Ambas as condições aplicadas pelo "AND" devem ser cumpridas</b> para que os valores sejam filtrados;</li>
     <li><b>Apenas uma das condições aplicadas pelo "OR" precisa ser cumprida</b> para que os valores sejam filtrados;</li>
 </ul>
