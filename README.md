@@ -24,6 +24,7 @@ A Jornada MySQL está ativamente recebendo novas atualizações, modificações 
 - [Ferramentas Recomendadas](#ferramentas-recomendadas)
     - [DB Designer e dbdiagram.io](#db-designer-e-dbdiagramio-sites)
     - [MySQL (Extensão do VS Code)](#mysql-extensão-do-vs-code)
+    - [DBeaver (Aplicativo)](#dbeaver-aplicativo)
 - [Visualizando, criando e utilizando um banco de dados](#visualizando-criando-e-utilizando-um-banco-de-dados)
     - [Visualizar os bancos de dados já criados](#comando-para-visualizar-os-bancos-de-dados-já-criados)
     - [Criar um novo banco de dados](#comando-para-criar-um-novo-banco-de-dados)
@@ -53,6 +54,9 @@ A Jornada MySQL está ativamente recebendo novas atualizações, modificações 
         - [Definir (SET)](#definir-set)
         - [Onde (WHERE)](#onde-where)
     - [Atualizar as informações de uma tabela](#atualizar-as-informações-de-uma-tabela)
+- [Operadores do "WHERE"](#operadores-do-where)
+    - [Correspondente (LIKE)](#correspondente-like)
+    - [E/Ou (AND/OR)](#eou-andor)
 </details>
 
 <br>
@@ -111,6 +115,10 @@ Facilitando o gerenciamento do banco de dados por meio de uma extensão para o V
 
 > [!WARNING]
 > A documentação da Jornada MySQL não foi pensada e/ou adaptada para a extensão "MySQL", do Visual Studio Code. Todos os comandos ainda podem ser realizados por meio da extensão, mas por sua conta e risco.
+
+<h3>DBeaver (Aplicativo)</h3>
+
+Para gerenciar o banco de dados de forma prática e intuitiva, o aplicativo para desktop [DBeaver](https://dbeaver.io/) é uma ferramenta extremamente útil, com várias funcionalidades e recomendada para projetos pessoais!
 
 <h2 align="center">Visualizando, criando e utilizando um banco de dados</h2>
 <p align="center">PS: Estarei utilizando o nome "db_github" como exemplo, mas pode ser qualquer nome!</p>
@@ -376,3 +384,34 @@ O "UPDATE" possui algumas condições para ser executado corretamente, e é reco
 ```sql
 UPDATE tb_exemplo SET exemplo_nome = "Nan" WHERE id_unico = 123;
 ```
+
+<h2 align="center">Operadores do "WHERE"</h2>
+A condição "WHERE" pode ser opcionalmente utilizada em conjunto de certos operadores, com a finalidade de filtrar os resultados obtidos em consultas no banco de dados de forma precisa. Alguns desses operadores são:
+
+<h3>Correspondente (LIKE):</h3>
+<ul>
+    <li>O operador "LIKE" é utilizado para filtrar resultados que possuam padrões correspondentes;</li>
+    <li>Exemplo: Filtrar por nomes cadastrados no banco que começam com a letra "A";</li>
+    <li>Para filtrar resultados que começam, terminam ou possuem o padrão correspondente, é necessária a adição do caractere "%";</li>
+    <li>O caractere "%" serve para sinalizar que existem caracteres antes ("%padrao") ou depois ("padrao%") do padrão desejado, ou para buscar qualquer valor que contém tal padrão, independentemente da posição do mesmo ("%padrao%");</li>
+</ul>
+
+<h4>Selecionar todos os valores da tabela "tb_amigos", filtrando os resultados para exibir apenas os que possuem os valores na coluna "nome" terminados pela letra "A":</h4>
+
+```sql
+SELECT * FROM tb_amigos WHERE nome LIKE "%A";
+```
+
+<h4>Filtrando os resultados para exibir apenas os que possuem os valores na coluna "nome" começados pela letra "A":</h4>
+
+```sql
+SELECT * FROM tb_amigos WHERE nome LIKE "A%";
+```
+
+<h4>Filtrando os resultados para exibir apenas os valores da coluna "nome" que possuem a letra "A" em qualquer posição:</h4>
+
+```sql
+SELECT * FROM tb_amigos WHERE nome LIKE "%A%";
+```
+
+<h3>E/Ou (AND/OR):</h3>
