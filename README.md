@@ -62,7 +62,7 @@ A Jornada MySQL está ativamente recebendo novas atualizações, modificações 
 <br>
 <h2 align="center">Introdução</h2>
 <h3>XAMPP</h3>
-Esse repositório foi inicialmente criado e planejado com a utilização da compilação de softwares livres <strong>XAMPP</strong> como base, então resultados e algumas instruções podem possivelmente variar.
+Esse repositório foi inicialmente criado e planejado com a utilização da compilação de softwares livres <strong>XAMPP</strong> como base, então resultados e algumas instruções podem variar.
 
 <h3>Iniciando o MySQL</h3>
 <ul>
@@ -150,12 +150,12 @@ USE db_github;
   Exemplo: INT(2) - Limita a quantidade de casas numéricas para 2, então 99 seria aceito, mas 100 não.<br><br>
   <li><b>DECIMAL()</b></li>
   Utilizado para valores quebrados (números com vírgula), declarado em conjunto de um limite máximo de casas numéricas dentro dos parênteses.
-  O primeiro valor declarado dentro do parênteses será o limite de casas númericas antes e após a vírgula, e o segundo será o limite de casas depois da vírgula;<br>
+  O primeiro valor declarado dentro do parênteses será o limite de casas numéricas antes e após a vírgula, e o segundo será o limite de casas depois da vírgula;<br>
   Exemplo: DECIMAL(4,2) - Limita a quantidade de casas numéricas antes e após a vírgula para 4, enquanto as casas após a vírgula serão limitadas para 2.
 </ul>
 
 > [!NOTE]
-> Ao inserir valores do tipo númerico, não os colocar dentro de aspas.
+> Ao inserir valores do tipo numérico, não os colocar dentro de aspas.
 
 <h4>Cadeia de caracteres (String):</h4>
 <ul>
@@ -282,7 +282,7 @@ SELECT * FROM tb_pessoas ORDER BY exemplo_idade DESC;
 
 <h2 align="center">Incremento Automático (AUTO_INCREMENT)</h2>
 <h3>Introdução:</h3>
-O incremento automático possui a função de atribuir valores únicos, em ordem crescente, a uma determinada coluna de forma automática, sem a necessidade preenchê-la manualmente. É normalmente utilizado na criação de IDs únicos em uma tabela, assim diferenciando seus valores de forma exata e precisa.
+O incremento automático possui a função de atribuir valores únicos, em ordem crescente, a uma determinada coluna de forma automática, sem a necessidade de preenchê-la manualmente. É normalmente utilizado na criação de IDs únicos em uma tabela, assim diferenciando seus valores de forma exata e precisa.
 <h3>Requerimentos:</h3>
 Para a declaração do incremento automático, primeiro precisamos cumprir os seguintes requerimentos:
 
@@ -321,7 +321,7 @@ CREATE TABLE tb_exemplo(id_unico INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT);
 
 <h2 align="center">Alterar Tabela (ALTER TABLE)</h2>
 <h3>Introdução:</h3>
-A declaração "ALTER TABLE" possui a função de modificar a estrutura de uma tabela para diversas finalidades. Nos exemplos a seguir, estaremos a utilizando para a adicionarmos e removermos colunas de uma tabela!
+A declaração "ALTER TABLE" possui a função de modificar a estrutura de uma tabela para diversas finalidades. Nos exemplos a seguir, estaremos a utilizando para adicionarmos e removermos colunas de uma tabela!
 
 <h4>Adicionar nova coluna em uma tabela:</h4>
 <ul>
@@ -355,7 +355,7 @@ ALTER TABLE tb_exemplo CHANGE coluna_antiga coluna_nova VARCHAR(50);
 > - Exemplo: Modificar o tipo de dado e limite de caracteres "VARCHAR(20)" de uma coluna para "VARCHAR(50)".
 
 <h2 align="center">Atualizando as informações de uma tabela (UPDATE)</h2>
-A declaração "UPDATE" possui a finalidade de atualizar as informações de uma tabela, podendo ser utilizada tanto para modificar informações já existentes em colunas, quanto para adicionar novas informações nas colunas da tabela. Para utilizarmos o "UPDATE", é recomendado que a tabela possua uma coluna de IDs únicos para diferenciar os valores que serão modificados.
+A declaração "UPDATE" possui a finalidade de atualizar as informações de uma tabela, podendo ser utilizada tanto para modificar informações já existentes, quanto para adicionar novas informações em determinada(s) coluna(s). Para utilizarmos o "UPDATE", é recomendado que a tabela possua uma coluna de IDs únicos para diferenciar os valores que serão modificados.
 
 <h3>Condições:</h3>
 O "UPDATE" possui algumas condições para ser executado corretamente, e é recomendado que as seguintes condições sejam cumpridas:
@@ -378,7 +378,7 @@ O "UPDATE" possui algumas condições para ser executado corretamente, e é reco
 
 <h3>Atualizar as informações de uma tabela:</h3>
 <ul>
-    <li>Atualizar a tabela "tb_exemplo", definindo a informação presente na coluna "exemplo_nomes" como "Nan" onde o "id_unico" da linha que será afetada possui o valor "123":</li>
+    <li>Atualizar a tabela "tb_exemplo", definindo a informação presente na coluna "exemplo_nome" como "Nan" onde o "id_unico" da linha que será afetada possui o valor "123":</li>
 </ul>
 
 ```sql
