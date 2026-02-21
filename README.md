@@ -386,12 +386,12 @@ UPDATE tb_exemplo SET exemplo_nome = "Nan" WHERE id_unico = 123;
 ```
 
 <h2 align="center">Operadores do "WHERE"</h2>
-A condição "WHERE" pode ser opcionalmente utilizada em conjunto de certos operadores, com a finalidade de filtrar os resultados obtidos em consultas no banco de dados de forma precisa. Alguns desses operadores são:
+A condição "WHERE" pode ser utilizada em conjunto de certos operadores, com a finalidade de filtrar os resultados obtidos em consultas no banco de dados de forma precisa. Alguns desses operadores são:
 
 <h3>Correspondente (LIKE):</h3>
 <ul>
     <li>O operador "LIKE" é utilizado para filtrar resultados que possuam padrões correspondentes;</li>
-    <li>Exemplo: Filtrar por nomes cadastrados no banco que começam com a letra "A";</li>
+    <li>Exemplo: Filtrar por nomes cadastrados em uma tabela que começam pela letra "A";</li>
     <li>O caractere "%" serve para sinalizar que existem caracteres antes ("%padrao") ou depois ("padrao%") do padrão desejado, ou para buscar qualquer valor que contém tal padrão, independentemente da posição do mesmo ("%padrao%");</li>
 </ul>
 
@@ -414,3 +414,9 @@ SELECT * FROM tb_amigos WHERE nome LIKE "%A%";
 ```
 
 <h3>E/Ou (AND/OR):</h3>
+<ul>
+    <li>Os operadores "AND" e "OR" possuem a finalidade de aplicar um filtro de condições, exibindo apenas os resultados que as cumprirem;</li>
+    <li>Essas condições são aplicadas com a ajuda dos <b>operadores de comparação</b> (=, +, -, !=, <, >, <=, >=)</li>
+    <li><b>Ambas as condições aplicadas pelo "AND" devem ser cumpridas</b> para que os valores sejam filtrados;</li>
+    <li><b>Apenas uma das condições aplicadas pelo "OR" precisa ser cumprida</b> para que os valores sejam filtrados;</li>
+</ul>
