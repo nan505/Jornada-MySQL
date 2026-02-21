@@ -67,8 +67,8 @@ Esse repositório foi inicialmente criado e planejado com a utilização da comp
 <h3>Iniciando o MySQL</h3>
 <ul>
   <li>Abra o XAMPP Control Panel, procure pelo módulo "MySQL" e clique em "Start". Após isso, clique no botão "Shell" para abrir o CMD;</li>
-  <li>Na recém aberta janela do CMD, insira o seguinte código:</li>
-</ul>
+  <li>Na janela recém-aberta do CMD, insira o seguinte comando:</li>
+</ul> 
 
 ```cmd
 mysql -h localhost -u root -p
@@ -420,3 +420,18 @@ SELECT * FROM tb_amigos WHERE nome LIKE "%A%";
     <li><b>Ambas as condições aplicadas pelo "AND" devem ser cumpridas</b> para que os valores sejam filtrados;</li>
     <li><b>Apenas uma das condições aplicadas pelo "OR" precisa ser cumprida</b> para que os valores sejam filtrados;</li>
 </ul>
+
+<h4>Selecionar todos os valores da tabela "tb_doces", filtrando os resultados com o operador "AND" para exibir apenas os que tiverem a coluna "quantidade" preenchida com um valor maior ou igual a 10, e menor ou igual a 20:</h4>
+
+```sql
+SELECT * FROM tb_doces WHERE quantidade >= 10 AND quantidade <= 20;
+```
+
+<h4>Filtrando os resultados com o operador "OR" para exibir os valores que tiverem a coluna "quantidade" preenchida com um valor maior ou igual a 20, ou menor ou igual a 5:</h4>
+
+```sql
+SELECT * FROM tb_doces WHERE quantidade >= 20 OR quantidade <= 5;
+```
+
+> [!WARNING]
+> É possível utilizar ambos os operadores "AND" e "OR" em conjunto para criar condições no mesmo comando, mas por sua conta e risco!
