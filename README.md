@@ -392,7 +392,6 @@ A condição "WHERE" pode ser opcionalmente utilizada em conjunto de certos oper
 <ul>
     <li>O operador "LIKE" é utilizado para filtrar resultados que possuam padrões correspondentes;</li>
     <li>Exemplo: Filtrar por nomes cadastrados no banco que começam com a letra "A";</li>
-    <li>Para filtrar resultados que começam, terminam ou possuem o padrão correspondente, é necessária a adição do caractere "%";</li>
     <li>O caractere "%" serve para sinalizar que existem caracteres antes ("%padrao") ou depois ("padrao%") do padrão desejado, ou para buscar qualquer valor que contém tal padrão, independentemente da posição do mesmo ("%padrao%");</li>
 </ul>
 
