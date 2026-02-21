@@ -59,7 +59,6 @@ A Jornada MySQL está ativamente recebendo novas atualizações, modificações 
     - [E/Ou (AND/OR)](#eou-andor)
 </details>
 
-<br>
 <h2 align="center">Introdução</h2>
 <h3>XAMPP</h3>
 Esse repositório foi inicialmente criado e planejado com a utilização da compilação de softwares livres <strong>XAMPP</strong> como base, então resultados e algumas instruções podem variar.
@@ -83,9 +82,9 @@ mysql -h localhost -u root -p
 <ul>
   <li>Todos os comandos precisam ser finalizados com ponto e vírgula (;);</li><br>
   <li>Ao inserir uma linha de comando incompleta, o CMD exibirá uma setinha (->):<br>
-      Ela serve para inserir o restante do código, sem a necessidade de reescrevê-lo;</li><br>
-  <li>Ao finalizar uma linha de código com erro(s), uma mensagem de erro será exibida no CMD:<br>
-      Caso um ou vários erros sejam exibidos, será necessário reescrever todo o código novamente, de forma correta;</li><br>
+      Ela serve para inserir o restante do comando, sem a necessidade de reescrevê-lo;</li><br>
+  <li>Ao finalizar uma linha de comando com erro(s), uma mensagem de erro será exibida no CMD:<br>
+      Caso um ou vários erros sejam exibidos, será necessário reescrever todo o comando novamente, de forma correta;</li><br>
   <li>Caracteres especiais não são reconhecidos por padrão e serão exibidos como "?", mas podem ser habilitados!</li>
 </ul>
 
