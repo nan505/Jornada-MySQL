@@ -434,3 +434,11 @@ SELECT * FROM tb_doces WHERE quantidade >= 20 OR quantidade <= 5;
 
 > [!WARNING]
 > É possível utilizar ambos os operadores "AND" e "OR" em conjunto para criar condições no mesmo comando, mas por sua conta e risco!
+
+<h2 align="center">Junções (JOIN)</h2>
+A cláusula "JOIN" é utilizada em comandos para realizar a junção de informações presentes em diferentes tabelas do mesmo banco de dados. Até o momento, utilizei os seguintes tipos de "JOIN":
+
+<h3>Junção Interna (INNER JOIN):</h3>
+O "INNER JOIN" realiza a junção de informações de duas ou mais tabelas, utilizando uma coluna em comum entre elas como base. Pode ser utilizado para diversas finalidades, mas estarei usando o "SELECT" de exemplo para a realização de consultas!
+
+Para utilizarmos o "INNER JOIN", também será necessário utilizarmos o seguinte operador:
